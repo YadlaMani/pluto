@@ -7,6 +7,7 @@ import {
 } from "@solana/web3.js";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Airdrop = () => {
   const [address, setAddress] = useState("");
@@ -32,6 +33,7 @@ const Airdrop = () => {
 
   // Handle Airdrop
   const handleAirdrop = async () => {
+    const navigate = useNavigate();
     if (!address) {
       toast.error("No public key found");
       return;
@@ -60,7 +62,7 @@ const Airdrop = () => {
 
   useEffect(() => {
     if (!jwt) {
-      window.location.href = "/login";
+      navigate("/login");
     }
     fetchUser();
   }, []);
