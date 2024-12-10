@@ -16,7 +16,7 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import Login from "./components/Login.jsx";
-import Signup from "./components/SignUp.jsx";
+import Signup from "./components/Signup.jsx";
 import Account from "./components/Account.jsx";
 import Airdrop from "./components/Airdrop.jsx";
 
