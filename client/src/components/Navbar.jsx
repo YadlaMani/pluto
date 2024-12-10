@@ -63,7 +63,7 @@ const Navbar = () => {
               Airdrop
             </Link>
             <a
-              href="https://github.com/"
+              href="https://github.com/YadlaMani/pluto"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors font-medium group"
@@ -127,7 +127,7 @@ const Navbar = () => {
                 Airdrop
               </Link>
               <a
-                href="https://github.com/"
+                href="https://github.com/YadlaMani/pluto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white py-2 transition-colors"
