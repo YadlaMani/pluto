@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import Modal from "react-modal";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
   const jwt = localStorage.getItem("jwt");
@@ -21,6 +22,7 @@ const Account = () => {
   const [signature, setSignature] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [transactions, setTransactions] = useState([]);
+  const navigate = useNavigate();
 
   const fetchUser = async () => {
     try {
@@ -101,7 +103,7 @@ const Account = () => {
 
   useEffect(() => {
     if (!jwt) {
-      window.location.href = "/login";
+      navigate("/login");
     }
     fetchUser();
   }, []);

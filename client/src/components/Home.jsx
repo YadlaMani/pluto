@@ -1,8 +1,12 @@
 import React from "react";
 import { FaRocket, FaShieldAlt, FaRegSmile } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  function handleGetStarted() {
+    navigate("/account");
+  }
   return (
     <div className="min-h-screen  text-gray-900">
       {/* Hero Section */}
@@ -49,12 +53,12 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <Link
-            to="/account"
+          <button
+            onClick={handleGetStarted}
             className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300"
           >
             Get Started
-          </Link>
+          </button>
           <p className="mt-4 text-white text-sm">
             Coming soon: More features to explore!
           </p>
