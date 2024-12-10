@@ -10,6 +10,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Airdrop = () => {
+  const navigate = useNavigate();
   const [address, setAddress] = useState("");
   const [isAirdropping, setIsAirdropping] = useState(false);
   const [airdropSuccess, setAirdropSuccess] = useState(false);
@@ -33,7 +34,6 @@ const Airdrop = () => {
 
   // Handle Airdrop
   const handleAirdrop = async () => {
-    const navigate = useNavigate();
     if (!address) {
       toast.error("No public key found");
       return;
