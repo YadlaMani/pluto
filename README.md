@@ -1,4 +1,5 @@
 # Simple Web Wallet 💸
+![image](https://github.com/user-attachments/assets/7e3ba991-5ea2-4703-9f4a-81fe2ab90ecf)
 
 ## 🌟 About the Project
 
