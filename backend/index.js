@@ -9,7 +9,7 @@ import jwt from "jsonwebtoken";
 import cors from "cors";
 import bs58 from "bs58";
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_URL }));
+app.use(cors({ origin: "https://pluto-wallet.vercel.app"}));
 
 app.listen(5050, () => {
   console.log("Listening on port 5050");
