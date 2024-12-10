@@ -26,10 +26,13 @@ const Signup = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:5050/api/v1/signup", {
-        username: name,
-        password: password,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}api/v1/signup`,
+        {
+          username: name,
+          password: password,
+        }
+      );
 
       toast.success("Account created successfully!");
       navigate("/login");

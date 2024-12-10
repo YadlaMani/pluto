@@ -9,7 +9,8 @@ import jwt from "jsonwebtoken";
 import cors from "cors";
 import bs58 from "bs58";
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173" }));
+
 app.listen(5050, () => {
   console.log("Listening on port 5050");
 });

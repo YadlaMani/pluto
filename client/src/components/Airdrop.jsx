@@ -18,9 +18,12 @@ const Airdrop = () => {
   // Fetch user's public key
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:5050/api/v1/me", {
-        headers: { Authorization: `Bearer ${jwt}` },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}api/v1/me`,
+        {
+          headers: { Authorization: `Bearer ${jwt}` },
+        }
+      );
       setAddress(response.data.user.publicKey);
     } catch (error) {
       toast.error("An error occurred while fetching user data");

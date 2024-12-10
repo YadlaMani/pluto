@@ -24,9 +24,12 @@ const Account = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:5050/api/v1/me", {
-        headers: { Authorization: `Bearer ${jwt}` },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}api/v1/me`,
+        {
+          headers: { Authorization: `Bearer ${jwt}` },
+        }
+      );
       setUser(response.data.user);
       setTransactions(response.data.user.transactionSignatures || []);
     } catch (error) {
@@ -75,11 +78,14 @@ const Account = () => {
         verifySignatures: false,
       });
 
-      const res = await axios.post("http://localhost:5050/api/v1/txn/sign", {
-        message: serializedTx,
-        retry: false,
-        user: user,
-      });
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}api/v1/txn/sign`,
+        {
+          message: serializedTx,
+          retry: false,
+          user: user,
+        }
+      );
 
       toast.success("Transaction Sent Successfully!");
       fetchSolanaBalance(user.publicKey);
