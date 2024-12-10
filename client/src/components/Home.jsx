@@ -50,7 +50,7 @@ const Home = () => {
 
         <div className="flex flex-col items-center">
           <Link
-            to="/signup"
+            to="/account"
             className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300"
           >
             Get Started
