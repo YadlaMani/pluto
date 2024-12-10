@@ -139,3 +139,8 @@ app.get("/api/v1/me", async (req, res) => {
     res.status(401).json({ message: "Invalid token" });
   }
 });
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello World!",
+  });
+});
